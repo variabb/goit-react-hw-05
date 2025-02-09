@@ -1,0 +1,19 @@
+.navigation-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+    color: gray;
+}
+
+.active-link {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+.navigationWrapper{
+    display: flex;
+}
