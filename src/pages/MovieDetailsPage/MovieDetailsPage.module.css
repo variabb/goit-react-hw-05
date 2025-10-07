@@ -1,0 +1,196 @@
+.pageWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.goBackButton {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.goBackButton:hover {
+  background-color: #005fcc;
+}
+
+.movieCard {
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.posterImage {
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.movieInfo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.movieTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.overview {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.genres {
+  font-weight: 500;
+  color: #0077ff;
+  margin-bottom: 15px;
+}
+
+.detailsNav {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.detailsNav a {
+  padding: 8px 15px;
+  border-radius: 8px 8px 0 0;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.detailsNav a:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
+
+.activeTab {
+  background-color: #0077ff;
+  color: #fff;
+}
+
+.castList {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 15px 0;
+}
+
+.castItem {
+  flex: 0 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.castItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.actorImage {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.actorName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.character {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+}
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.reviewCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reviewCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.reviewAuthor {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.reviewContent {
+  color: #555;
+  line-height: 1.5;
+}
+
+.reviewFooter {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: right;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .movieCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .posterImage {
+    width: 80%;
+  }
+
+  .movieInfo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .detailsNav {
+    justify-content: center;
+  }
+}

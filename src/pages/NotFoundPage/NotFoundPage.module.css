@@ -1,0 +1,29 @@
+.notFoundWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+}
+
+.notFoundWrapper h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.notFoundWrapper a {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #0077ff;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.notFoundWrapper a:hover {
+  background-color: #005fcc;
+}

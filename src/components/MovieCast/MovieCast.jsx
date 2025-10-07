@@ -24,27 +24,27 @@ export default function MovieCast() {
 
   const placeholderImage = "/src/images/error.jpg";
 
-  return (
-    <div>
-      <h2>Cast</h2>
-      <ul>
-        {cast.map((actor) => (
-          <li key={actor.id} className={styles.castItem}>
-            <img
-              src={
-                actor.profile_path
-                  ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
-                  : placeholderImage
-              }
-              alt={actor.name}
-              className={styles.actorImage}
-            />
-            <p>
-              {actor.name} as {actor.character}
-            </p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+ return (
+   <div>
+     <h2>Cast</h2>
+     <div className={styles.castList}>
+       {cast.map((actor) => (
+         <div key={actor.id} className={styles.castItem}>
+           <img
+             src={
+               actor.profile_path
+                 ? `https://image.tmdb.org/t/p/w200${actor.profile_path}`
+                 : placeholderImage
+             }
+             alt={actor.name}
+             className={styles.actorImage}
+           />
+           <p className={styles.actorName}>{actor.name}</p>
+           <p className={styles.character}>{actor.character}</p>
+         </div>
+       ))}
+     </div>
+   </div>
+ );
+
 }

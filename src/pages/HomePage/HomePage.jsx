@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import MovieList from "../../components/MovieList/MovieList";
+import s from "./HomePage.module.css";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -21,9 +22,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div>
-      <h1>Trending Movies</h1>
-      {}
+    <div className={s.pageWrapper}>
+      <h1 className={s.pageTitle}>Trending Movies</h1>
       <MovieList movies={movies} />
     </div>
   );

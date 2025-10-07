@@ -1,19 +1,43 @@
-.navigation-list {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
+.navigationWrapper {
+  background: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.link {
-    text-decoration: none;
-    color: gray;
+.navigationList {
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.active-link {
-    text-decoration: none;
-    color: blue;
-    font-weight: bold;
+.navLink {
+  color: #222;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s;
 }
-.navigationWrapper{
-    display: flex;
+
+.navLink:hover {
+  color: #0077ff;
+}
+
+.activeLink::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: #0077ff;
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+
+a {
+  text-decoration: none;
 }

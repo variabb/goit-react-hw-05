@@ -1,0 +1,12 @@
+.pageTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #222;
+}
+
+.moviesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}

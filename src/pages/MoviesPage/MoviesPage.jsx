@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import MovieList from "../../components/MovieList/MovieList";
+import s from "./MoviesPage.module.css";
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-
   const searchQuery = searchParams.get("query") || "";
 
   useEffect(() => {
@@ -38,14 +38,19 @@ export default function MoviesPage() {
   };
 
   return (
-    <div>
-      <h1>Search Movies</h1>
-      <form onSubmit={handleSearch}>
-        <input type="text" name="query" defaultValue={searchQuery} />
-        <button type="submit">Search</button>
+    <div className={s.pageWrapper}>
+      <h1 className={s.pageTitle}>Search Movies</h1>
+      <form className={s.searchForm} onSubmit={handleSearch}>
+        <input
+          className={s.searchInput}
+          type="text"
+          name="query"
+          defaultValue={searchQuery}
+        />
+        <button className={s.searchButton} type="submit">
+          Search
+        </button>
       </form>
-
-      {}
       <MovieList movies={movies} />
     </div>
   );
